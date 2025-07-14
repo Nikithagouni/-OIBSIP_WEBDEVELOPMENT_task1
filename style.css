@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.6;
+  color: #333;
+  background-color: #fffdf7;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #333;
+  color: white;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  font-size: 1.2rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: #333;
+    flex-direction: column;
+    display: none;
+  }
+
+  #menu-toggle:checked + .menu-icon + .nav-links {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
+
+/* Hero */
+.hero {
+  background: url('cafe.jpg') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.hero-content {
+  background-color: rgba(0,0,0,0.5);
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: #e09f3e;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: background 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #d17f00;
+}
+
+/* Menu Section */
+.menu {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: #fdf6e3;
+}
+
+.menu-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.item {
+  padding: 1rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* About */
+.about {
+  padding: 3rem 2rem;
+  text-align: center;
+  background-color: #fff8ee;
+}
+
+/* Contact */
+.contact {
+  padding: 3rem 2rem;
+  text-align: center;
+  background-color: #fbe9d0;
+}
+
+/* Footer */
+footer {
+  padding: 1.5rem;
+  background-color: #333;
+  color: white;
+  text-align: center;
+}
+
+footer a {
+  color: #e09f3e;
+  text-decoration: none;
+}
